@@ -1,0 +1,26 @@
+<h2 style="color:hsl(348, 83%, 47%);">Productos - hbs</h2>
+{{#if productos }}
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Titulo</th>
+                <th scope="col">Precio</th>
+                <th scope="col">url</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each productos}}
+            <tr>
+                <td>{{Titulo}}</td>
+                <td>{{Precio}}</td>
+                <td>{{url}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+{{else}}
+    <h3 class="alert alert-danger">No se encontraron datos</h3>
+{{/if}}
+<div>
+    <a href="/" class="btn btn-primary btn-lg active float-right" role="button" aria-pressed="true">Agregar producto</a>
+</div>
